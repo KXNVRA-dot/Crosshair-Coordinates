@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cursor-tracker"
+version = "0.1.0"
+description = "Tkinter app to display live mouse cursor coordinates with an always-on-top toggle"
+readme = "README.md"
+authors = [{ name = "Your Name" }]
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["cursor", "coordinates", "mouse", "tkinter"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Desktop Environment",
+]
+dependencies = []
+
+[project.scripts]
+cursor-tracker = "cursor_tracker.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cursor_tracker"]
